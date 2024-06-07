@@ -17,10 +17,12 @@ log.txt
 .vscode/
 .sass-cache/
 .versions/
+.next/
 node_modules/
 $RECYCLE.BIN/
 
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-.env
+
+package-lock.json

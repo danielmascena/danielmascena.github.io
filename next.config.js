@@ -6,4 +6,5 @@ module.exports = {
     domains: ['imgix.cosmicjs.com'],
     formats: ['image/avif', 'image/webp'],
   },
+  output: 'export',
 };

@@ -1,465 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel Mascena — Banner</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Mascena — Banner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400&display=swap');
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    background: #0a0a0a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    gap: 24px;
-    padding: 32px;
-    font-family: 'DM Sans', sans-serif;
-  }
+    body {
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 24px;
+      padding: 32px;
+      font-family: 'DM Sans', sans-serif;
+    }
 
-  .label {
-    color: #555;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+    .label {
+      color: #555;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
 
-  /* ── BANNER ── */
-  .banner-wrap {
-    width: 100%;
-    max-width: 1128px; /* LinkedIn standard */
-    position: relative;
-  }
+    /* ── BANNER ── */
+    .banner-wrap {
+      width: 100%;
+      max-width: 1128px;
+      /* LinkedIn standard */
+      position: relative;
+    }
 
-  .banner {
-    width: 100%;
-    aspect-ratio: 1128 / 191;
-    background: #060b14;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 52px;
-    gap: 0;
-  }
+    .banner {
+      width: 100%;
+      aspect-ratio: 1128 / 191;
+      background: #060b14;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 52px;
+      gap: 0;
+    }
 
-  /* grid overlay */
-  .banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,200,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,200,255,0.04) 1px, transparent 1px);
-    background-size: 32px 32px;
-    z-index: 0;
-  }
+    /* grid overlay */
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 200, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 200, 255, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: 0;
+    }
 
-  /* glow blobs */
-  .glow-1 {
-    position: absolute;
-    width: 320px; height: 320px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,180,255,0.18) 0%, transparent 70%);
-    top: -80px; left: -40px;
-    z-index: 0;
-    animation: pulse1 6s ease-in-out infinite;
-  }
-  .glow-2 {
-    position: absolute;
-    width: 260px; height: 260px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,255,180,0.12) 0%, transparent 70%);
-    bottom: -100px; right: 180px;
-    z-index: 0;
-    animation: pulse2 8s ease-in-out infinite;
-  }
-  .glow-3 {
-    position: absolute;
-    width: 180px; height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(120,80,255,0.14) 0%, transparent 70%);
-    top: 10px; right: 60px;
-    z-index: 0;
-    animation: pulse1 7s ease-in-out infinite reverse;
-  }
+    /* glow blobs */
+    .glow-1 {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 180, 255, 0.18) 0%, transparent 70%);
+      top: -80px;
+      left: -40px;
+      z-index: 0;
+      animation: pulse1 6s ease-in-out infinite;
+    }
 
-  @keyframes pulse1 {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.08); }
-  }
-  @keyframes pulse2 {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.12); }
-  }
+    .glow-2 {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 255, 180, 0.12) 0%, transparent 70%);
+      bottom: -100px;
+      right: 180px;
+      z-index: 0;
+      animation: pulse2 8s ease-in-out infinite;
+    }
 
-  /* vertical accent bar */
-  .accent-bar {
-    position: relative;
-    z-index: 2;
-    width: 3px;
-    height: 80px;
-    background: linear-gradient(180deg, #00c8ff, #00ffb2);
-    border-radius: 2px;
-    margin-right: 28px;
-    flex-shrink: 0;
-    box-shadow: 0 0 12px rgba(0,200,255,0.6);
-  }
+    .glow-3 {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(120, 80, 255, 0.14) 0%, transparent 70%);
+      top: 10px;
+      right: 60px;
+      z-index: 0;
+      animation: pulse1 7s ease-in-out infinite reverse;
+    }
 
-  /* left: name + title */
-  .left {
-    position: relative;
-    z-index: 2;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+    @keyframes pulse1 {
 
-  .name {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(22px, 3.4vw, 38px);
-    color: #f0f4ff;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
+      0%,
+      100% {
+        opacity: 0.7;
+        transform: scale(1);
+      }
 
-  .name span {
-    color: #00c8ff;
-  }
+      50% {
+        opacity: 1;
+        transform: scale(1.08);
+      }
+    }
 
-  .title {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(9px, 1.05vw, 12px);
-    color: #7ec8e3;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
+    @keyframes pulse2 {
 
-  .exp-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 8px;
-    background: rgba(0,200,255,0.07);
-    border: 1px solid rgba(0,200,255,0.2);
-    border-radius: 4px;
-    padding: 3px 10px;
-    width: fit-content;
-  }
+      0%,
+      100% {
+        opacity: 0.6;
+        transform: scale(1);
+      }
 
-  .exp-badge span {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(8px, 0.9vw, 10px);
-    color: #00ffb2;
-    letter-spacing: 0.12em;
-  }
+      50% {
+        opacity: 1;
+        transform: scale(1.12);
+      }
+    }
 
-  /* divider */
-  .divider {
-    position: relative;
-    z-index: 2;
-    width: 1px;
-    height: 90px;
-    background: rgba(255,255,255,0.07);
-    margin: 0 36px;
-    flex-shrink: 0;
-  }
+    /* vertical accent bar */
+    .accent-bar {
+      position: relative;
+      z-index: 2;
+      width: 3px;
+      height: 80px;
+      background: linear-gradient(180deg, #00c8ff, #00ffb2);
+      border-radius: 2px;
+      margin-right: 28px;
+      flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(0, 200, 255, 0.6);
+    }
 
-  /* middle: languages */
-  .langs {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-shrink: 0;
-  }
+    /* left: name + title */
+    .left {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-  .lang-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+    .name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(22px, 3.4vw, 38px);
+      color: #f0f4ff;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
 
-  .lang-pill {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(8px, 0.85vw, 10px);
-    letter-spacing: 0.08em;
-    padding: 3px 10px;
-    border-radius: 3px;
-    border: 1px solid;
-    transition: all 0.2s;
-  }
+    .name span {
+      color: #00c8ff;
+    }
 
-  .lang-pill.java    { color: #f89820; border-color: rgba(248,152,32,0.4); background: rgba(248,152,32,0.07); }
-  .lang-pill.js      { color: #f7df1e; border-color: rgba(247,223,30,0.35); background: rgba(247,223,30,0.06); }
-  .lang-pill.ts      { color: #3178c6; border-color: rgba(49,120,198,0.5); background: rgba(49,120,198,0.1); }
-  .lang-pill.c       { color: #a8c4e0; border-color: rgba(168,196,224,0.35); background: rgba(168,196,224,0.06); }
-  .lang-pill.python  { color: #4b8bbe; border-color: rgba(75,139,190,0.4); background: rgba(75,139,190,0.08); }
+    .title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(9px, 1.05vw, 12px);
+      color: #7ec8e3;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
 
-  .langs-label {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(7px, 0.7vw, 9px);
-    color: #445566;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-  }
+    .exp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      background: rgba(0, 200, 255, 0.07);
+      border: 1px solid rgba(0, 200, 255, 0.2);
+      border-radius: 4px;
+      padding: 3px 10px;
+      width: fit-content;
+    }
 
-  /* right: interests */
-  .interests {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-shrink: 0;
-  }
+    .exp-badge span {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(8px, 0.9vw, 10px);
+      color: #00ffb2;
+      letter-spacing: 0.12em;
+    }
 
-  .interests-label {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(7px, 0.7vw, 9px);
-    color: #445566;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
+    /* divider */
+    .divider {
+      position: relative;
+      z-index: 2;
+      width: 1px;
+      height: 90px;
+      background: rgba(255, 255, 255, 0.07);
+      margin: 0 36px;
+      flex-shrink: 0;
+    }
 
-  .interest-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+    /* middle: languages */
+    .langs {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
 
-  .interest-dot {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+    .lang-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-  .interest-text {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    font-size: clamp(9px, 0.95vw, 11.5px);
-    color: #9ab4cc;
-    letter-spacing: 0.03em;
-  }
+    .lang-pill {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(8px, 0.85vw, 10px);
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 3px;
+      border: 1px solid;
+      transition: all 0.2s;
+    }
 
-  /* far right links */
-  .links {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-shrink: 0;
-    margin-left: 32px;
-    align-items: flex-end;
-  }
+    .lang-pill.java {
+      color: #f89820;
+      border-color: rgba(248, 152, 32, 0.4);
+      background: rgba(248, 152, 32, 0.07);
+    }
 
-  .link-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    text-decoration: none;
-  }
+    .lang-pill.js {
+      color: #f7df1e;
+      border-color: rgba(247, 223, 30, 0.35);
+      background: rgba(247, 223, 30, 0.06);
+    }
 
-  .link-icon {
-    width: 20px; height: 20px;
-    opacity: 0.7;
-  }
+    .lang-pill.ts {
+      color: #3178c6;
+      border-color: rgba(49, 120, 198, 0.5);
+      background: rgba(49, 120, 198, 0.1);
+    }
 
-  .link-text {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(7.5px, 0.8vw, 9.5px);
-    color: #5a7a8a;
-    letter-spacing: 0.08em;
-  }
+    .lang-pill.c {
+      color: #a8c4e0;
+      border-color: rgba(168, 196, 224, 0.35);
+      background: rgba(168, 196, 224, 0.06);
+    }
 
-  /* scan line */
-  .scan-line {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(0,200,255,0.3) 50%, transparent 100%);
-    top: 0; left: 0;
-    z-index: 3;
-    animation: scan 4s linear infinite;
-  }
+    .lang-pill.python {
+      color: #4b8bbe;
+      border-color: rgba(75, 139, 190, 0.4);
+      background: rgba(75, 139, 190, 0.08);
+    }
 
-  @keyframes scan {
-    0%   { top: 0%; opacity: 0; }
-    10%  { opacity: 1; }
-    90%  { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
-  }
+    .langs-label {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(7px, 0.7vw, 9px);
+      color: #445566;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
 
-  /* bottom accent line */
-  .bottom-line {
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(90deg, #00c8ff 0%, #00ffb2 40%, transparent 100%);
-    z-index: 3;
-    opacity: 0.5;
-  }
+    /* right: interests */
+    .interests {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-shrink: 0;
+    }
 
-  /* Download button */
-  .download-btn {
-    background: rgba(0,200,255,0.08);
-    border: 1px solid rgba(0,200,255,0.25);
-    color: #00c8ff;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    padding: 10px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
-  .download-btn:hover {
-    background: rgba(0,200,255,0.15);
-    box-shadow: 0 0 16px rgba(0,200,255,0.2);
-  }
+    .interests-label {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(7px, 0.7vw, 9px);
+      color: #445566;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-  .hint {
-    color: #333;
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-align: center;
-    max-width: 480px;
-    line-height: 1.6;
-  }
-</style>
+    .interest-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .interest-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .interest-text {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(9px, 0.95vw, 11.5px);
+      color: #9ab4cc;
+      letter-spacing: 0.03em;
+    }
+
+    /* far right links */
+    .links {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+      margin-left: 32px;
+      align-items: flex-end;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+    }
+
+    .link-icon {
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+    }
+
+    .link-text {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(7.5px, 0.8vw, 9.5px);
+      color: #5a7a8a;
+      letter-spacing: 0.08em;
+    }
+
+    /* scan line */
+    .scan-line {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(0, 200, 255, 0.3) 50%, transparent 100%);
+      top: 0;
+      left: 0;
+      z-index: 3;
+      animation: scan 4s linear infinite;
+    }
+
+    @keyframes scan {
+      0% {
+        top: 0%;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        top: 100%;
+        opacity: 0;
+      }
+    }
+
+    /* bottom accent line */
+    .bottom-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #00c8ff 0%, #00ffb2 40%, transparent 100%);
+      z-index: 3;
+      opacity: 0.5;
+    }
+
+    /* Download button */
+    .download-btn {
+      background: rgba(0, 200, 255, 0.08);
+      border: 1px solid rgba(0, 200, 255, 0.25);
+      color: #00c8ff;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      padding: 10px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+    }
+
+    .download-btn:hover {
+      background: rgba(0, 200, 255, 0.15);
+      box-shadow: 0 0 16px rgba(0, 200, 255, 0.2);
+    }
+
+    .hint {
+      color: #333;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="label">// linkedin · xing · profile banner · 1128 × 191px</div>
+  <div class="banner-wrap">
+    <div class="banner" id="banner">
 
-<div class="banner-wrap">
-  <div class="banner" id="banner">
+      <div class="glow-1"></div>
+      <div class="glow-2"></div>
+      <div class="glow-3"></div>
+      <div class="scan-line"></div>
+      <div class="bottom-line"></div>
 
-    <div class="glow-1"></div>
-    <div class="glow-2"></div>
-    <div class="glow-3"></div>
-    <div class="scan-line"></div>
-    <div class="bottom-line"></div>
+      <!-- accent -->
+      <div class="accent-bar"></div>
 
-    <!-- accent -->
-    <div class="accent-bar"></div>
-
-    <!-- LEFT: name -->
-    <div class="left">
-      <div class="name">Daniel <span>Mascena</span></div>
-      <div class="title">Senior Software Engineer &nbsp;/&nbsp; Fullstack &nbsp;/&nbsp; Architect</div>
-      <div class="exp-badge">
-        <span>⬡ 18 YRS EXP &nbsp;·&nbsp; BSc Software Development &nbsp;·&nbsp; DSA · IoT · Architecture</span>
+      <!-- LEFT: name -->
+      <div class="left">
+        <div class="name">Daniel <span>Mascena</span></div>
+        <div class="title">Senior Software Engineer &nbsp;/&nbsp; Fullstack &nbsp;/&nbsp; Architect</div>
+        <div class="exp-badge">
+          <span>⬡ 18 YRS EXP &nbsp;·&nbsp; BSc Software Development &nbsp;·&nbsp; DSA · IoT · Architecture</span>
+        </div>
       </div>
+
+      <div class="divider"></div>
+
+      <!-- MIDDLE: languages -->
+      <div class="langs">
+        <div class="langs-label">// languages</div>
+        <div class="lang-row">
+          <span class="lang-pill java">Java</span>
+          <span class="lang-pill js">JavaScript</span>
+          <span class="lang-pill ts">TypeScript</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-pill c">C</span>
+          <span class="lang-pill python">Python</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- RIGHT: interests -->
+      <div class="interests">
+        <div class="interests-label">// focus areas</div>
+        <div class="interest-item">
+          <div class="interest-dot" style="background:#00c8ff;box-shadow:0 0 6px #00c8ff88"></div>
+          <span class="interest-text">Algorithms &amp; Data Structures</span>
+        </div>
+        <div class="interest-item">
+          <div class="interest-dot" style="background:#00ffb2;box-shadow:0 0 6px #00ffb288"></div>
+          <span class="interest-text">Software Architecture</span>
+        </div>
+        <div class="interest-item">
+          <div class="interest-dot" style="background:#a78bfa;box-shadow:0 0 6px #a78bfa88"></div>
+          <span class="interest-text">IoT &amp; Embedded Systems</span>
+        </div>
+        <div class="interest-item">
+          <div class="interest-dot" style="background:#f89820;box-shadow:0 0 6px #f8982088"></div>
+          <span class="interest-text">Web Fullstack (FE + BE)</span>
+        </div>
+      </div>
+
+      <!-- far right: links -->
+      <div class="links">
+        <a class="link-item" href="https://github.com/danielmascena" target="_blank">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="#7ec8e3">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span class="link-text">danielmascena</span>
+        </a>
+        <a class="link-item" href="https://leetcode.com/u/dmasc" target="_blank">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="#f89820">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+          </svg>
+          <span class="link-text">dmasc</span>
+        </a>
+      </div>
+
     </div>
-
-    <div class="divider"></div>
-
-    <!-- MIDDLE: languages -->
-    <div class="langs">
-      <div class="langs-label">// languages</div>
-      <div class="lang-row">
-        <span class="lang-pill java">Java</span>
-        <span class="lang-pill js">JavaScript</span>
-        <span class="lang-pill ts">TypeScript</span>
-      </div>
-      <div class="lang-row">
-        <span class="lang-pill c">C</span>
-        <span class="lang-pill python">Python</span>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- RIGHT: interests -->
-    <div class="interests">
-      <div class="interests-label">// focus areas</div>
-      <div class="interest-item">
-        <div class="interest-dot" style="background:#00c8ff;box-shadow:0 0 6px #00c8ff88"></div>
-        <span class="interest-text">Algorithms &amp; Data Structures</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-dot" style="background:#00ffb2;box-shadow:0 0 6px #00ffb288"></div>
-        <span class="interest-text">Software Architecture</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-dot" style="background:#a78bfa;box-shadow:0 0 6px #a78bfa88"></div>
-        <span class="interest-text">IoT &amp; Embedded Systems</span>
-      </div>
-      <div class="interest-item">
-        <div class="interest-dot" style="background:#f89820;box-shadow:0 0 6px #f8982088"></div>
-        <span class="interest-text">Web Fullstack (FE + BE)</span>
-      </div>
-    </div>
-
-    <!-- far right: links -->
-    <div class="links">
-      <a class="link-item" href="https://github.com/danielmascena" target="_blank">
-        <svg class="link-icon" viewBox="0 0 24 24" fill="#7ec8e3">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span class="link-text">danielmascena</span>
-      </a>
-      <a class="link-item" href="https://leetcode.com/u/dmasc" target="_blank">
-        <svg class="link-icon" viewBox="0 0 24 24" fill="#f89820">
-          <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
-        </svg>
-        <span class="link-text">dmasc</span>
-      </a>
-    </div>
-
   </div>
-</div>
 
-<button class="download-btn" onclick="downloadBanner()">⬇ Save as PNG</button>
-
-<div class="hint">
-  Open in Chrome → click "Save as PNG" &nbsp;|&nbsp; Or screenshot the banner at 1128×191 for direct upload to LinkedIn / Xing
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script>
-async function downloadBanner() {
-  const banner = document.getElementById('banner');
-  const btn = document.querySelector('.download-btn');
-  btn.textContent = '⏳ Rendering...';
-  btn.disabled = true;
-
-  try {
-    const canvas = await html2canvas(banner, {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: '#060b14',
-      logging: false
-    });
-
-    const link = document.createElement('a');
-    link.download = 'daniel-mascena-banner.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    btn.textContent = '✓ Downloaded!';
-    setTimeout(() => { btn.textContent = '⬇ Save as PNG'; btn.disabled = false; }, 2500);
-  } catch(e) {
-    btn.textContent = '⬇ Save as PNG';
-    btn.disabled = false;
-    alert('Use browser screenshot instead — right-click banner → Inspect and screenshot the element.');
-  }
-}
-</script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
+
 </html>
